@@ -1,11 +1,12 @@
 [Desktop Entry]
-Comment[en_US]=
-Comment=
-Exec=if [[ $HOME == $( pwd ) ]] ; then echo 'Right click any file, open with memorize to load it to memory for faster access' ; read line ; else echo Loading %f ; vmtouch -t %f ; fi ;
-GenericName[en_US]=Load files into memory (RAM) for faster access
-GenericName=Load files into memory (RAM) for faster access
+Categories=Utility;System
+Comment[en_US]=Right click a file or a folder and 'open with' memorize to load it into memory (RAM) for faster access
+Comment=Right click a file or a folder and 'open with' memorize to load it into memory (RAM) for faster access
+Exec=if [ -z "%f" ] ; then echo 'Right click a file or a folder and open with memorize to load it into memory (RAM) for faster access' ; read line ; else echo Loading %f ; vmtouch -t -f %f ; sleep 5s ; fi
+GenericName[en_US]=Load files and folders into memory (RAM) for faster access
+GenericName=Load files and folders into memory (RAM) for faster access
 Icon=speedometer
-MimeType=
+MimeType=inode/directory;
 Name[en_US]=memorize
 Name=memorize
 Path=
@@ -13,7 +14,6 @@ StartupNotify=true
 Terminal=true
 TerminalOptions=
 Type=Application
-Categories=Utility;System
 X-DBUS-ServiceName=
 X-DBUS-StartupType=none
 X-KDE-SubstituteUID=false
