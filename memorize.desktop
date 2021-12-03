@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[en_US]=
+Comment=
+Exec=if [[ $HOME == $( pwd ) ]] ; then echo 'Right click any file, open with memorize to load it to memory for faster access' ; read line ; else echo Loading %f ; vmtouch -t %f ; fi ;
+GenericName[en_US]=Load files into memory (RAM) for faster access
+GenericName=Load files into memory (RAM) for faster access
+Icon=speedometer
+MimeType=
+Name[en_US]=memorize
+Name=memorize
+Path=
+StartupNotify=true
+Terminal=true
+TerminalOptions=
+Type=Application
+Categories=Utility;System
+X-DBUS-ServiceName=
+X-DBUS-StartupType=none
+X-KDE-SubstituteUID=false
+X-KDE-Username=
